@@ -5,7 +5,7 @@
   * [User](https://github.com/mhdzaid/User)
   * [Location-Writer](https://github.com/mhdzaid/location-writer)
   * [Location-Reader](https://github.com/mhdzaid/location-reader) 
-* `How To Run` these projects is given in their respective `README.md`  
+* Instructions on how to run these projects is given in their respective `README.md`  
 * `Eureka` is used for microservice discovery along with `Spring Cloud` for loadbalancing.
 * The service [Location-Writer](https://github.com/mhdzaid/location-writer) is used to recieve location data. Since there will be a lot of request coming to this end point I've created multiple instances of this service which are loadbalanced.
 *  The loadbalancing startegy is the default `Round Robbin`, I've also created a custom strategy based on `URL hash` for server stickiness. The reason for this was because we have multiple instances of `Location` microservice, the data of a particular user would be distributed, making pagination and data retrieval complex.
